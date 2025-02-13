@@ -10,14 +10,14 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function __construct()
-    {
-        // Jika ingin menggunakan sanctum untuk API
-        $this->middleware('auth:sanctum')->except(['register', 'login']);
+    // public function __construct()
+    // {
+    //     // Jika ingin menggunakan sanctum untuk API
+    //     $this->middleware('auth:sanctum')->except(['register', 'login']);
 
-        // ATAU jika untuk web authentication biasa
-        $this->middleware('auth')->except(['register', 'login', 'showLoginForm', 'showRegisterForm']);
-    }
+    //     // ATAU jika untuk web authentication biasa
+    //     $this->middleware('auth')->except(['register', 'login', 'showLoginForm', 'showRegisterForm']);
+    // }
 
     public function showLoginForm()
     {
